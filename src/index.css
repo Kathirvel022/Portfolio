@@ -10,3 +10,7 @@ section {
   transform: translateY(-5px);
   transition: 0.3s;
 }
+
+html, body {
+  overflow-x: hidden;
+}
