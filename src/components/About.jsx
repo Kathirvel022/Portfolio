@@ -4,7 +4,7 @@ const About = () => {
             <div className="container">
                 <div className="row align-items-center">
                     <div className="col-md-5 mb-4" data-aos="fade-right">
-                        <img src="src\assets\IMG-20260125-WA00202.jpg.jpeg" alt="" className="img-fluid rounded shadow"/>
+                        <img src="./src/assets/IMG-20260125-WA00202.jpg.jpeg" alt="" className="img-fluid rounded shadow"/>
                     </div>
                     <div className="col-md-7" data-aos="fade-left">
                         <h2 className="fw-bold">About Me</h2>
