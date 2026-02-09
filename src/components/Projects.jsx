@@ -5,7 +5,6 @@ function Projects() {
         <div className="row g-3 justify-content-center">
         <div className="col-md-6 col-lg-4" data-aos="fade-up">
         <div className="card h-100 shadow">
-            <img src="todo.png" alt="" />
             <div className="card-body">
                 <h5 className="card-title">Todo App</h5>
                 <p className="card-text">React + Bootstrap based todo application.</p>
@@ -16,7 +15,6 @@ function Projects() {
         </div>
         <div className="col-md-6 col-lg-4" data-aos="fade-up">
         <div className="card h-100 shadow">
-            <img src="todo.png" alt="" />
             <div className="card-body">
                 <h5 className="card-title">User Dashboard</h5>
                 <p className="card-text">HTMl + CSS + JS based User Dashboard website.</p>
@@ -27,7 +25,6 @@ function Projects() {
         </div>
         <div className="col-md-6 col-lg-4" data-aos="fade-up">
         <div className="card h-100 shadow">
-            <img src="todo.png" alt="" />
             <div className="card-body">
                 <h5 className="card-title">Clone Software Solution</h5>
                 <p className="card-text">HTML + CSS based Clone Software Solution website.</p>
