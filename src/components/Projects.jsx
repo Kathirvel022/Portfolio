@@ -6,6 +6,16 @@ function Projects() {
         <div className="col-md-6 col-lg-4" data-aos="fade-up">
         <div className="card h-100 shadow">
             <div className="card-body">
+                <h5 className="card-title">Clinic Appointment Management System</h5>
+                <p className="card-text">Full Stack based Clinic Appointment Management System.</p>
+                <a href="https://github.com/Kathirvel022/Clinic_Appointment_Management_System.git" target="_blank" className="btn btn-dark btn-sm me-2">GitHub</a>
+                <a href="https://clinic-appointment-management-system.netlify.app/" target="_blank" className="btn btn-outline-dark btn-sm">Live Demo</a>
+            </div>
+        </div>
+        </div>
+        <div className="col-md-6 col-lg-4" data-aos="fade-up">
+        <div className="card h-100 shadow">
+            <div className="card-body">
                 <h5 className="card-title">Todo App</h5>
                 <p className="card-text">React + Bootstrap based todo application.</p>
                 <a href="https://github.com/Kathirvel022/ToDO-APP.git" target="_blank" className="btn btn-dark btn-sm me-2">GitHub</a>
