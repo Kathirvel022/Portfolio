@@ -7,7 +7,7 @@ const Intro = () => (
             </p>
             <div className="d-flex justify-content-center gap-3 flex-wrap">
                 <a href="#contact" className="btn btn-primary btn-lg">Hire Me</a>
-                <a href="src\assets\Kathirvel_Resume.pdf" target="_blank" className="btn btn-outline-light btn-lg">Download CV</a>
+                <a href="src/assets/Kathirvel_Resume.pdf" target="_blank" className="btn btn-outline-light btn-lg">Download CV</a>
             </div>  
         </div>
 
