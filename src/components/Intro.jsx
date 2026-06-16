@@ -1,6 +1,7 @@
 import React from 'react';
 import { TypeAnimation } from 'react-type-animation';
 import { motion } from 'framer-motion';
+import Profile from '../assets/img.png';
 
 const Intro = () => {
     return (
@@ -88,7 +89,7 @@ const Intro = () => {
                             </div>
                             
                             <motion.img 
-                                src="/public/img.png" 
+                                src={Profile}
                                 alt="Kathirvel T" 
                                 className="img-fluid rounded-circle border border-4"
                                 style={{ borderColor: 'var(--card-bg)', maxWidth: '350px', width: '100%', objectFit: 'cover', aspectRatio: '1/1', boxShadow: '0 20px 40px rgba(0,0,0,0.2)' }}
