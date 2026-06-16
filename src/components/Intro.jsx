@@ -68,7 +68,7 @@ const Intro = () => {
                                 <a href="#contact" className="btn-custom">
                                     Hire Me
                                 </a>
-                                <a href="src/assets/Kathirvel_Resume.pdf" target="_blank" rel="noreferrer" className="btn-outline-custom">
+                                <a href="/public/Kathirvel_Resume.pdf" download className="btn-outline-custom">
                                     Download CV
                                 </a>
                             </div>  
