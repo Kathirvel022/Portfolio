@@ -1,16 +1,168 @@
-html {
-  scroll-behavior: smooth;
+:root {
+  /* Light Mode Variables */
+  --bg-color: #F8FAFC;
+  --card-bg: #FFFFFF;
+  --primary-text: #0F172A;
+  --secondary-text: #475569;
+  --muted-text: #64748B;
+  --accent-gradient: linear-gradient(135deg, #06b6d4, #a855f7); /* Cyan + Purple */
+  --accent-color: #06b6d4;
+  --border-color: rgba(0, 0, 0, 0.05);
+  --glass-bg: rgba(255, 255, 255, 0.7);
 }
 
-section {
-  scroll-margin-top: 70px;
+[data-theme='dark'] {
+  /* Dark Mode Variables */
+  --bg-color: #020617;
+  --card-bg: rgba(255,255,255,0.08);
+  --primary-text: #F8FAFC;
+  --secondary-text: #CBD5E1;
+  --muted-text: #94A3B8;
+  --accent-gradient: linear-gradient(135deg, #22d3ee, #c084fc); /* Lighter Cyan + Purple */
+  --accent-color: #22d3ee;
+  --border-color: rgba(255, 255, 255, 0.1);
+  --glass-bg: rgba(2, 6, 23, 0.7);
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  transition: 0.3s;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html, body {
+  background-color: var(--bg-color) !important;
+  color: var(--primary-text) !important;
+  font-family: 'Inter', 'Roboto', sans-serif;
   overflow-x: hidden;
+  scroll-behavior: smooth;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+section {
+  scroll-margin-top: 80px;
+}
+
+a {
+  text-decoration: none !important;
+  color: inherit;
+}
+
+button {
+  text-decoration: none !important;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--muted-text);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-text);
+}
+
+/* Typography Helpers */
+.text-primary { color: var(--primary-text) !important; }
+.text-secondary { color: var(--secondary-text) !important; }
+.text-muted { color: var(--muted-text) !important; }
+.text-accent { 
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Container Helpers */
+.bg-glass {
+  background: var(--glass-bg) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  border: 1px solid var(--border-color) !important;
+}
+
+.card-custom {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+.card-custom:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+[data-theme='dark'] .card-custom:hover {
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.btn-custom {
+  background: var(--accent-gradient);
+  color: #fff !important;
+  padding: 10px 24px;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: none;
+}
+.btn-custom:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.btn-outline-custom {
+  background: transparent;
+  color: var(--primary-text) !important;
+  border: 2px solid var(--accent-color);
+  padding: 8px 24px;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: background 0.3s ease, color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.btn-outline-custom:hover {
+  background: var(--accent-color);
+  color: #020617 !important; /* Dark text on light accent background for contrast */
+}
+
+/* Override Bootstrap Backgrounds so Theme handles it */
+.bg-light, .bg-dark, .bg-white, .bg-black {
+  background-color: transparent !important;
+}
+
+/* Optimization for mobile animations */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Hide default cursor on desktop devices */
+@media (pointer: fine) {
+  body {
+    cursor: none;
+  }
+  a, button, .card-custom, input, textarea, select {
+    cursor: none !important;
+  }
 }

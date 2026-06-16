@@ -1,59 +1,73 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+import { BsWhatsapp, BsEnvelopeFill, BsGithub } from 'react-icons/bs';
+
 const Contact = () => {
-  return (
-    <section id="contact" className="py-5 bg-dark text-white">
-      <div className="container text-center">
+    return (
+        <section id="contact" className="py-5 position-relative border-top border-secondary border-opacity-10">
+            <div className="container py-5 text-center">
+                
+                <motion.div 
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8 }}
+                >
+                    {/* Heading */}
+                    <div className="mb-5">
+                        <h2 className="display-5 fw-bold mb-3">Let's Work <span className="text-accent">Together</span></h2>
+                        <div className="mx-auto bg-accent mb-4" style={{ height: '4px', width: '60px', borderRadius: '2px', background: 'var(--accent-gradient)' }}></div>
+                        <p className="text-secondary fs-5 mx-auto" style={{ maxWidth: '600px' }}>
+                            I’m open to frontend developer roles, internships, and freelance projects.
+                            If you like my work, feel free to reach out.
+                        </p>
+                    </div>
 
-        {/* Heading */}
-        <div className="mb-4" data-aos="fade-up">
-          <h2 className="fw-bold">Let’s Work Together</h2>
-          <p className="text-muted mt-2">
-            I’m open to frontend developer roles, internships, and freelance projects.
-            If you like my work, feel free to reach out.
-          </p>
-        </div>
+                    {/* CTA Buttons */}
+                    <div className="d-flex justify-content-center gap-3 flex-wrap mb-5">
+                        <a
+                            href="https://wa.me/919344127179"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="btn-custom py-3 px-4 shadow"
+                            style={{ background: 'linear-gradient(135deg, #25D366, #128C7E)' }}
+                        >
+                            <BsWhatsapp size={20} />
+                            Chat on WhatsApp
+                        </a>
 
-        {/* CTA Buttons */}
-        <div className="d-flex justify-content-center gap-3 flex-wrap" data-aos="zoom-in">
-          
-          {/* WhatsApp */}
-          <a
-            href="https://wa.me/919344127179"
-            target="_blank"
-            rel="noreferrer"
-            className="btn btn-success btn-lg"
-          >
-            <i className="bi bi-whatsapp me-2"></i>
-            Chat on WhatsApp
-          </a>
+                        <a
+                            href="mailto:kathirvpy@gmail.com"
+                            className="btn-outline-custom py-3 px-4 bg-glass shadow"
+                        >
+                            <BsEnvelopeFill size={20} />
+                            Email Me
+                        </a>
+                    </div>
 
-          {/* Email */}
-          <a
-            href="mailto:kathirvpy@gmail.com"
-             className="btn btn-outline-light btn-lg"
-          >
-            <i className="bi bi-envelope me-2"></i>
-            Email Me
-          </a>
+                    {/* Social Links */}
+                    <div className="mb-5 d-flex justify-content-center gap-4">
+                        <motion.a 
+                            href="https://github.com/kathirvel022" 
+                            target="_blank" 
+                            rel="noreferrer" 
+                            className="text-primary bg-glass rounded-circle p-3 d-inline-flex border border-secondary border-opacity-25 shadow-sm"
+                            whileHover={{ scale: 1.2, y: -5, color: 'var(--accent-color)' }}
+                        >
+                            <BsGithub size={24} />
+                        </motion.a>
+                    </div>
 
-        </div>
+                    {/* Copyright */}
+                    <hr className="border-secondary opacity-25 my-4 mx-auto" style={{ maxWidth: '800px' }} />
 
-        {/* Social Links */}
-        <div className="mt-4" data-aos="fade-up">
-          <a href="https://github.com/kathirvel022" target="_blank" className="text-white me-3 fs-4">
-            <i className="bi bi-github"></i>
-          </a>
-        </div>
+                    <p className="text-muted small mb-0 fw-medium">
+                        © {new Date().getFullYear()} Kathirvel T. Crafted with <span className="text-accent">React</span> & <span className="text-accent">Framer Motion</span>.
+                    </p>
+                </motion.div>
+            </div>
+        </section>
+    );
+};
 
-        {/* Copyright */}
-        <hr className="border-secondary my-4" />
-
-        <p className="text-white small mb-0">
-          © {new Date().getFullYear()} Kathirvel. All rights reserved.
-        </p>
-
-      </div>
-    </section>
-  )
-}
-
-export default Contact
+export default Contact;
