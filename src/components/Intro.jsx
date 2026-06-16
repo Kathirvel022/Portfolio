@@ -88,7 +88,7 @@ const Intro = () => {
                             </div>
                             
                             <motion.img 
-                                src="src/assets/IMG.jpg.jpeg" 
+                                src="/public/img.png" 
                                 alt="Kathirvel T" 
                                 className="img-fluid rounded-circle border border-4"
                                 style={{ borderColor: 'var(--card-bg)', maxWidth: '350px', width: '100%', objectFit: 'cover', aspectRatio: '1/1', boxShadow: '0 20px 40px rgba(0,0,0,0.2)' }}

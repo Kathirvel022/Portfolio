@@ -23,7 +23,7 @@ const About = () => {
                                     <div className="col-md-5 text-center">
                                         <div className="position-relative d-inline-block">
                                             <div className="position-absolute top-0 start-0 w-100 h-100 rounded-4" style={{ background: 'var(--accent-gradient)', transform: 'translate(10px, 10px)', zIndex: -1 }}></div>
-                                            <img src="src/assets/IMG.jpg.jpeg" alt="Kathirvel" className="img-fluid rounded-4 shadow-lg border border-2" style={{ borderColor: 'var(--border-color)' }} />
+                                            <img src="/public/img.png" alt="Kathirvel" className="img-fluid rounded-4 shadow-lg border border-2" style={{ borderColor: 'var(--border-color)' }} />
                                         </div>
                                     </div>
                                     <div className="col-md-7">
